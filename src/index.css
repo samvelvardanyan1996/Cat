@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#root {
+    display: flex;
+}
+.flexMenu {
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 70px;
+}
+.flexContent {
+    width: calc(100% - 224px);
+    display: flex;
+    flex-direction: column;
+}
+.flexTitle {
+    display: flex;
+    color: #333;
+    width: calc(100%);
+    height: 66px;
+    font-size: 42px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.flexTable {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.flexButtonsTr > button, .loadMore > button {
+    width: 200px;
+    display: flex;
+    border: 1px solid #6c757d;
+    padding: 0.375rem 0.75rem;
+    margin: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: transparent;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.flexButtonsTr > button:hover, .loadMore > button:hover, .active {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+.iconMenu {
+    display: none;
+}
+.flexTr {
+    display: flex;
+    width: calc(100% / 3 - 20px);
+    padding: 10px;
+    max-height: 442px;
+}
+.flexTr > img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 958px) {
+    .flexMenu {
+        width: auto;
+        min-width: 130px;
+    }
+    .textMenu {
+        display: none;
+    }
+    .iconMenu {
+        display: flex;
+    }
+    .flexButtonsTr > button, .loadMore > button {
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 548px) {
+    .flexTitle {
+        font-size: 34px;
+    }
+}
